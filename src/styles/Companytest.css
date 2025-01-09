@@ -1,0 +1,94 @@
+.company {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ourStaff {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: black;
+    margin-top: 20px;
+}
+
+.ourStaff p1 {
+    margin-top: 10px;
+    width: 600px;
+    text-align: center;
+    font-size: small;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusted spacing between boxes */
+}
+
+.container .box {
+    position: relative;
+    width: calc(25% - 20px); /* Adjusted width calculation for four boxes in a row */
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.container .box .imgBox {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.container .box .imgBox img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 2s;
+}
+
+.container .box:hover .imgBox img {
+    transform: scale(1.2);
+}
+
+.container .box .details {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgb(255, 255, 255);
+    transform: scaleY(0);
+    transition: transform 0.5s;
+}
+
+.container .box:hover .details {
+    transform: scaleY(1);
+}
+
+.container .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #000;
+}
+
+@media screen and (max-width: 650px) {
+    .ourStaff p {
+        font-size: 16px;
+    }
+
+    .container .box {
+        width: 90%;
+    }
+}

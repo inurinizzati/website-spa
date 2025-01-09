@@ -1,0 +1,132 @@
+
+.company {
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+
+.company .ourStaff {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+	margin: 500px;
+  }
+
+.company .ourStaff {
+    font-weight: 400;
+    font-size: 50px;
+    color: black;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-40px);
+}
+
+.ourStaff p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 35px;
+}
+  
+.container{
+	width: 100%;
+	margin: 20px auto 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    /* width: 100%;
+    max-width: 1280px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; */
+}
+
+/*tengok balik styling ni nanti*/
+.container .box{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/* tadi tambah kat sini*/
+.container .box .imgBox{
+	position: relative;
+	overflow: hidden;
+    /* width: 70vw;
+    height: auto;
+    display: grid; */
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+
+}
+.container .box .imgBox img{
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 2s;
+}
+.container .box:hover .imgBox img{
+	transform: scale(1.2);
+}
+.container .box .details{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	background: rgb(255, 255, 255);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+.container .box:hover .details{
+	transform: scaleY(1);
+}
+.container .box .details .content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 15px;
+	color: #fff;
+}
+.container .box .details .content h2{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: rgb(0, 0, 0);
+	text-align: center;
+}
+.container .box .details .content p{
+	margin: 10px 0 0;
+	padding: 0;
+	color: #000;
+	text-align: center;
+}
+@media only screen and (max-width: 650px) {
+	.container {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+        /**/
+        grid-template-columns: 1fr 1fr;
+	}
+	.container .box {
+		display: block;
+        /**/
+        grid-template-columns: 1fr;
+	}
+}

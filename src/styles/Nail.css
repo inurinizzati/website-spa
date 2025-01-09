@@ -1,0 +1,54 @@
+.nail {
+    width: 100%;
+    height: 190vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px; 
+  }
+ 
+  .overlayTextN {
+    color: rgba(116, 57, 113, 0.712);
+  }
+  
+  /* Additional styling for the text */
+  .overlayTextN h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .overlayTextN p {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .aboutMiddle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  /* Additional styles for .aboutBottom, if needed */
+  
+  .nailType {
+    width: 80%;
+    max-width: 800px; /* Set a max-width to limit content width */
+    margin-bottom: 30px;
+    text-align: left; /* Adjust text alignment as needed */
+  }
+  
+  .nailType h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .nailType p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .nailType p:last-child {
+    margin-bottom: 0; /* Remove margin for the last paragraph */
+  }
+  
+
